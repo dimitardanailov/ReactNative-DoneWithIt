@@ -9,49 +9,19 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   SafeAreaView,
+  Button,
 } from "react-native";
 
 export default function App() {
   const onPressEvent = () => {
-    console.log("The image was pressed!");
+    console.log("The component was pressed!");
   };
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
-        <Text>Open up App.js to start working on your app!</Text>
-        <TouchableHighlight onPress={onPressEvent}>
-          <Image
-            source={{
-              width: 200,
-              height: 300,
-              uri: "https://picsum.photos/200/300",
-            }}
-            width="200"
-          />
-        </TouchableHighlight>
-        <TouchableOpacity>
-          <Image
-            source={{
-              width: 200,
-              height: 300,
-              uri: "https://picsum.photos/200/300",
-            }}
-            width="200"
-          />
-        </TouchableOpacity>
-        <TouchableWithoutFeedback onPress={onPressEvent}>
-          <Image
-            source={{
-              width: 200,
-              height: 300,
-              uri: "https://picsum.photos/200/300",
-            }}
-            width="200"
-          />
-        </TouchableWithoutFeedback>
+        <Button title="Click me" onPress={onPressEvent} />
       </ScrollView>
-
       <StatusBar style="auto" />
     </SafeAreaView>
   );
